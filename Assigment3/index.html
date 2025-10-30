@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Betty Nilson - Art Director</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <!-- Load Lucide Icons for vector icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        /* Custom Tailwind Configuration */
+        /* Define a custom primary color to match the design's teal */
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-teal': '#4dc2c2', /* Main design color */
+                        'light-teal': '#a8e1e1', /* Lighter background color in the 'Hello' section */
+                        'dark-bg': '#313131', /* Dark footer background */
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                },
+            }
+        }
+        
+        /* Global Styles */
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #313131;
+        }
+
+        /* Utility for Icon Display */
+        .icon-lg {
+            width: 2.5rem;
+            height: 2.5rem;
+            stroke-width: 1.5;
+        }
+
+        /* Custom Scrollbar for a cleaner look */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #4dc2c2;
+            border-radius: 4px;
+        }
+        
+        /* For the animated stat numbers */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in {
+            animation: fadeIn 0.5s ease-out;
+        }
+    </style>
+</head>
+<body class="bg-white">
+
+    <!-- Header / Hero Section -->
+    <header class="bg-primary-teal text-white pt-10 md:pt-20 pb-16 md:pb-0 relative overflow-hidden">
+        <div class="container mx-auto px-6 max-w-7xl flex flex-col md:flex-row items-center">
+            
+            <!-- Left Content: Text -->
+            <div class="md:w-1/2 mb-10 md:mb-20 space-y-4 md:pr-10 z-10">
+                <p class="text-sm uppercase tracking-widest font-medium opacity-80">Design is Art</p>
+                <h1 class="text-5xl md:text-6xl font-extrabold leading-tight">Betty Nilson</h1>
+                <p class="text-2xl font-light italic">Art Director</p>
+                
+                <div class="flex flex-wrap gap-x-8 gap-y-2 pt-6 text-sm">
+                    <div class="flex items-center space-x-2">
+                        <i data-lucide="mail" class="icon-lg w-4 h-4"></i>
+                        <a href="mailto:hello@betty.com" class="hover:underline">hello@betty.com</a>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <i data-lucide="phone" class="icon-lg w-4 h-4"></i>
+                        <p>+0 123 456 789</p>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <i data-lucide="map-pin" class="icon-lg w-4 h-4"></i>
+                        <p>New York, USA</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Content: Image -->
+            <div class="md:w-1/2 flex justify-center md:justify-end">
+                <!-- Placeholder for the stylish image of the woman -->
+                <img src="/Assigment3/images/Screenshot 2025-10-30 201808.png" 
+                     alt="Betty Nilson Portrait" 
+                     class="w-full max-w-sm md:max-w-md object-cover rounded-tl-full md:rounded-b-none shadow-xl transform md:translate-y-20">
+            </div>
+        </div>
+    </header>
+
+    <main class="w-full">
+        <!-- Services Section -->
+        <section id="services" class="py-20 md:py-32 bg-white">
+            <div class="container mx-auto px-6 max-w-5xl">
+                <h2 class="text-3xl font-bold text-center mb-2">Have a Look at my Services</h2>
+                <p class="text-gray-500 text-center mb-16 max-w-xl mx-auto">
+                    Here's a brief overview of what I offer, combining creativity with technical execution to deliver outstanding results.
+                </p>
+
+                <div class="grid md:grid-cols-2 gap-12 text-center">
+                    <!-- Service 1 -->
+                    <div class="space-y-4 p-6 transition duration-300 hover:shadow-lg rounded-xl">
+                        <i data-lucide="layout-grid" class="icon-lg text-primary-teal mx-auto"></i>
+                        <h3 class="text-xl font-semibold">Web & Mobile Design</h3>
+                        <p class="text-gray-600">
+                            Crafting intuitive, user-friendly interfaces for both web platforms and mobile applications, focusing on seamless user experience (UX) and beautiful aesthetics (UI).
+                        </p>
+                    </div>
+                    <!-- Service 2 -->
+                    <div class="space-y-4 p-6 transition duration-300 hover:shadow-lg rounded-xl">
+                        <i data-lucide="palette" class="icon-lg text-primary-teal mx-auto"></i>
+                        <h3 class="text-xl font-semibold">Branding & Identity</h3>
+                        <p class="text-gray-600">
+                            Developing comprehensive brand strategies, logos, and visual identities that resonate with your audience and communicate your unique value proposition effectively.
+                        </p>
+                    </div>
+                    <!-- Service 3 -->
+                    <div class="space-y-4 p-6 transition duration-300 hover:shadow-lg rounded-xl">
+                        <i data-lucide="lightbulb" class="icon-lg text-primary-teal mx-auto"></i>
+                        <h3 class="text-xl font-semibold">Creative Consulting</h3>
+                        <p class="text-gray-600">
+                            Providing expert guidance on design strategy, market trends, and visual direction to ensure your projects achieve their maximum creative and business potential.
+                        </p>
+                    </div>
+                    <!-- Service 4 -->
+                    <div class="space-y-4 p-6 transition duration-300 hover:shadow-lg rounded-xl">
+                        <i data-lucide="book-open" class="icon-lg text-primary-teal mx-auto"></i>
+                        <h3 class="text-xl font-semibold">Digital Illustration</h3>
+                        <p class="text-gray-600">
+                            Creating custom digital artwork, illustrations, and graphic assets for use across all media, ensuring a consistent and unique visual language.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About / Hello Section -->
+        <section id="about" class="md:grid md:grid-cols-2">
+            
+            <!-- Top Left: Text Block -->
+            <div class="bg-light-teal p-12 md:p-20 flex flex-col justify-center">
+                <h2 class="text-2xl font-bold mb-4">Hello!</h2>
+                <p class="text-gray-700 leading-relaxed">
+                    I am Betty Nilson, an experienced Art Director passionate about blending innovation with timeless design principles. With a decade of experience, I specialize in crafting holistic user experiences and building powerful brand identities that drive engagement. My philosophy centers on simplicity, functionality, and emotional connection, ensuring every project is not just visually stunning but also achieves strategic goals. I thrive in dynamic environments and love collaborating to bring bold visions to life.
+                </p>
+                <div class="pt-6">
+                    <a href="#" class="inline-block px-8 py-3 bg-white text-primary-teal font-semibold rounded-lg shadow-md hover:shadow-lg transition duration-300 transform hover:scale-[1.02]">
+                        Download CV
+                    </a>
+                </div>
+            </div>
+
+            <!-- Top Right: Image -->
+            <div class="bg-white flex justify-center items-center overflow-hidden">
+                <img src="/Assigment3/images/Screenshot 2025-10-30 201808.png" 
+                     alt="Woman celebrating success" 
+                     class="w-full h-full object-cover">
+            </div>
+
+            <!-- Bottom Left: Contact List / Details -->
+            <div class="bg-primary-teal p-12 md:p-20 text-white flex flex-col justify-center">
+                <ul class="space-y-3 text-lg">
+                    <li class="flex justify-between items-center border-b border-white/30 pb-2">
+                        <span class="font-light">Name</span>
+                        <span class="font-semibold">Betty Nilson</span>
+                    </li>
+                    <li class="flex justify-between items-center border-b border-white/30 pb-2">
+                        <span class="font-light">Age</span>
+                        <span class="font-semibold">30</span>
+                    </li>
+                    <li class="flex justify-between items-center border-b border-white/30 pb-2">
+                        <span class="font-light">Address</span>
+                        <span class="font-semibold">New York, USA</span>
+                    </li>
+                    <li class="flex justify-between items-center border-b border-white/30 pb-2">
+                        <span class="font-light">Email</span>
+                        <span class="font-semibold">hello@betty.com</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Bottom Right: Stats -->
+            <div class="bg-primary-teal p-12 md:p-20 text-white grid grid-cols-2 gap-8 text-center">
+                <div class="animate-fade-in">
+                    <p class="text-5xl font-bold mb-1">17</p>
+                    <p class="text-lg uppercase tracking-wide">Years of Experience</p>
+                </div>
+                <div class="animate-fade-in">
+                    <p class="text-5xl font-bold mb-1">12+</p>
+                    <p class="text-lg uppercase tracking-wide">Awards Won</p>
+                </div>
+                <div class="animate-fade-in">
+                    <p class="text-5xl font-bold mb-1">138</p>
+                    <p class="text-lg uppercase tracking-wide">Projects Completed</p>
+                </div>
+                <div class="animate-fade-in">
+                    <p class="text-5xl font-bold mb-1">350</p>
+                    <p class="text-lg uppercase tracking-wide">Happy Clients</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Qualifications Section (Experience & Education) -->
+        <section id="qualifications" class="py-20 md:py-32 bg-white">
+            <div class="container mx-auto px-6 max-w-7xl">
+                <h2 class="text-3xl font-bold text-center mb-2">My Qualifications</h2>
+                <p class="text-gray-500 text-center mb-16 max-w-xl mx-auto">
+                    A summary of my professional journey and academic background, detailing the skills and expertise I've acquired over the years.
+                </p>
+
+                <div class="grid md:grid-cols-2 gap-12">
+                    
+                    <!-- Left Column: Experience -->
+                    <div>
+                        <h3 class="text-2xl font-semibold mb-8 border-b pb-4">Work Experience</h3>
+                        
+                        <!-- Item 1 -->
+                        <div class="mb-8 relative pl-6 border-l-2 border-primary-teal">
+                            <span class="absolute -left-3 top-0 w-6 h-6 bg-white border-2 border-primary-teal rounded-full flex items-center justify-center text-primary-teal font-bold"></span>
+                            <p class="text-sm text-gray-500 mb-1">2018 - Present</p>
+                            <h4 class="text-xl font-semibold">Senior Art Director</h4>
+                            <p class="text-primary-teal font-medium mb-3">Creative Agency, New York</p>
+                            <p class="text-gray-600 text-sm">Led a team of 10 designers and illustrators, spearheading major campaigns for Fortune 500 clients. Responsible for final visual sign-off across all digital and print media.</p>
+                        </div>
+                        
+                        <!-- Item 2 -->
+                        <div class="mb-8 relative pl-6 border-l-2 border-primary-teal">
+                            <span class="absolute -left-3 top-0 w-6 h-6 bg-white border-2 border-primary-teal rounded-full flex items-center justify-center text-primary-teal font-bold"></span>
+                            <p class="text-sm text-gray-500 mb-1">2015 - 2018</p>
+                            <h4 class="text-xl font-semibold">UX/UI Designer</h4>
+                            <p class="text-primary-teal font-medium mb-3">Tech Innovators, San Francisco</p>
+                            <p class="text-gray-600 text-sm">Designed and prototyped mobile applications, resulting in a 25% increase in user retention within the first year of launch.</p>
+                        </div>
+                        
+                    </div>
+
+                    <!-- Right Column: Education -->
+                    <div>
+                        <h3 class="text-2xl font-semibold mb-8 border-b pb-4">Education</h3>
+                        
+                        <!-- Item 1 -->
+                        <div class="mb-8 relative pl-6 border-l-2 border-primary-teal">
+                            <span class="absolute -left-3 top-0 w-6 h-6 bg-white border-2 border-primary-teal rounded-full flex items-center justify-center text-primary-teal font-bold"></span>
+                            <p class="text-sm text-gray-500 mb-1">2013 - 2015</p>
+                            <h4 class="text-xl font-semibold">M.A. in Visual Arts</h4>
+                            <p class="text-primary-teal font-medium mb-3">Pratt Institute, New York</p>
+                            <p class="text-gray-600 text-sm">Focused on digital media, interactive installations, and advanced typography. Graduated with honors.</p>
+                        </div>
+                        
+                        <!-- Item 2 -->
+                        <div class="mb-8 relative pl-6 border-l-2 border-primary-teal">
+                            <span class="absolute -left-3 top-0 w-6 h-6 bg-white border-2 border-primary-teal rounded-full flex items-center justify-center text-primary-teal font-bold"></span>
+                            <p class="text-sm text-gray-500 mb-1">2009 - 2013</p>
+                            <h4 class="text-xl font-semibold">B.A. in Graphic Design</h4>
+                            <p class="text-primary-teal font-medium mb-3">NYU, New York</p>
+                            <p class="text-gray-600 text-sm">Foundational studies in traditional and modern design principles, including color theory and layout.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio / Projects Section -->
+        <section id="portfolio" class="py-20 md:py-32 bg-gray-50">
+            <div class="container mx-auto px-6 max-w-7xl">
+                <h2 class="text-3xl font-bold text-center mb-2">My Qualifications</h2>
+                <p class="text-gray-500 text-center mb-16 max-w-xl mx-auto">
+                    A selection of my best projects showcasing my versatility in branding, web design, and digital art direction.
+                </p>
+
+                <!-- Responsive Grid Layout (Mimics the complex layout in the image) -->
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                    <!-- Project 1 (Large Image Block - Branding) -->
+                    <div class="lg:col-span-2 bg-white rounded-xl overflow-hidden shadow-lg transition duration-300 hover:shadow-xl group">
+                        <img src="/Assigment3/images/branding.png" alt="Branding Project" class="w-full h-auto object-cover transition duration-500 group-hover:scale-[1.03]">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2">Brand Identity Refresh</h3>
+                            <p class="text-gray-600 text-sm">Complete redesign of corporate identity, including logo, color palette, and style guides.</p>
+                            <a href="#" class="text-primary-teal mt-2 inline-block text-sm font-medium hover:underline">View Case Study &rarr;</a>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 (Small Image Block - Food Photography) -->
+                    <div class="bg-white rounded-xl overflow-hidden shadow-lg transition duration-300 hover:shadow-xl group">
+                        <img src="/Assigment3/images/laptop.jpeg" alt="Food Photography Project" class="w-full h-auto object-cover transition duration-500 group-hover:scale-[1.03]">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2">Mobile Application UI</h3>
+                            <p class="text-gray-600 text-sm">UI/UX design for a popular recipe discovery application focusing on ease of use.</p>
+                            <a href="#" class="text-primary-teal mt-2 inline-block text-sm font-medium hover:underline">View Project &rarr;</a>
+                        </div>
+                    </div>
+
+                    <!-- Project 3 (Small Image Block - Web App) -->
+                    <div class="bg-white rounded-xl overflow-hidden shadow-lg transition duration-300 hover:shadow-xl group">
+                        <img src="/Assigment3/images/webapplication.png" alt="Web Application Design" class="w-full h-auto object-cover transition duration-500 group-hover:scale-[1.03]">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2">Dashboard Design</h3>
+                            <p class="text-gray-600 text-sm">A clean, functional dashboard interface for a B2B SaaS platform, improving data visualization.</p>
+                            <a href="#" class="text-primary-teal mt-2 inline-block text-sm font-medium hover:underline">View Details &rarr;</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Project 4 (Large Image Block - Web Design) -->
+                    <div class="lg:col-span-2 bg-white rounded-xl overflow-hidden shadow-lg transition duration-300 hover:shadow-xl group">
+                        <img src="/Assigment3/images/Screenshot 2025-10-30 201808.png" alt="E-commerce Web Design" class="w-full h-auto object-cover transition duration-500 group-hover:scale-[1.03]">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2">E-commerce Platform</h3>
+                            <p class="text-gray-600 text-sm">Full responsive design for a high-end fashion e-commerce site, focused on visual merchandising.</p>
+                            <a href="#" class="text-primary-teal mt-2 inline-block text-sm font-medium hover:underline">View Project &rarr;</a>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section id="testimonials" class="py-20 md:py-32 bg-primary-teal text-white">
+            <div class="container mx-auto px-6 max-w-7xl">
+                <h2 class="text-3xl font-bold text-center mb-16">Testimonials</h2>
+
+                <div class="grid md:grid-cols-2 gap-x-12 gap-y-16">
+                    
+                    <!-- Testimonial 1 -->
+                    <blockquote class="flex space-x-4">
+                        <img src="https://placehold.co/60x60/a8e1e1/313131?text=A1" alt="Client Avatar" class="w-16 h-16 rounded-full object-cover flex-shrink-0 shadow-md">
+                        <div class="space-y-2">
+                            <p class="italic relative pl-6 before:content-['"'] before:text-5xl before:text-white before:absolute before:left-0 before:-top-4">
+                                Betty's attention to detail transformed our brand identity. Her designs are both beautiful and incredibly functional, leading to immediate positive feedback from our users. A true professional.
+                            </p>
+                            <p class="font-semibold pt-2">— Jane Doe, CEO of Acme Inc.</p>
+                        </div>
+                    </blockquote>
+                    
+                    <!-- Testimonial 2 -->
+                    <blockquote class="flex space-x-4">
+                        <img src="https://placehold.co/60x60/a8e1e1/313131?text=A2" alt="Client Avatar" class="w-16 h-16 rounded-full object-cover flex-shrink-0 shadow-md">
+                        <div class="space-y-2">
+                            <p class="italic relative pl-6 before:content-['"'] before:text-5xl before:text-white before:absolute before:left-0 before:-top-4">
+                                The web design Betty delivered was beyond our expectations. She captured our vision perfectly and optimized the site for mobile seamlessly. Highly recommend her creative consultation services.
+                            </p>
+                            <p class="font-semibold pt-2">— John Smith, Marketing Director</p>
+                        </div>
+                    </blockquote>
+                    
+                    <!-- Testimonial 3 -->
+                    <blockquote class="flex space-x-4">
+                        <img src="https://placehold.co/60x60/a8e1e1/313131?text=A3" alt="Client Avatar" class="w-16 h-16 rounded-full object-cover flex-shrink-0 shadow-md">
+                        <div class="space-y-2">
+                            <p class="italic relative pl-6 before:content-['"'] before:text-5xl before:text-white before:absolute before:left-0 before:-top-4">
+                                Professional, prompt, and incredibly creative. Betty made the complex process of launching a new app interface feel simple and intuitive. A pleasure to work with from start to finish.
+                            </p>
+                            <p class="font-semibold pt-2">— Sarah Chen, Lead Developer</p>
+                        </div>
+                    </blockquote>
+                    
+                    <!-- Testimonial 4 -->
+                    <blockquote class="flex space-x-4">
+                        <img src="https://placehold.co/60x60/a8e1e1/313131?text=A4" alt="Client Avatar" class="w-16 h-16 rounded-full object-cover flex-shrink-0 shadow-md">
+                        <div class="space-y-2">
+                            <p class="italic relative pl-6 before:content-['"'] before:text-5xl before:text-white before:absolute before:left-0 before:-top-4">
+                                Her branding work is exceptional. The new logo and style guide gave us the competitive edge we needed. We saw an immediate uplift in brand recognition globally. Fantastic service!
+                            </p>
+                            <p class="font-semibold pt-2">— Michael Lee, Founder</p>
+                        </div>
+                    </blockquote>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA / Project Inquiry Section -->
+        <section id="contact" class="py-20 md:py-32 bg-white">
+            <div class="container mx-auto px-6 max-w-3xl text-center">
+                <h2 class="text-3xl font-bold mb-4">Do You Have Any Project?</h2>
+                <p class="text-gray-600 mb-10">
+                    If you have a project in mind, don't hesitate to reach out. Let's build something amazing together.
+                </p>
+
+                <form class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 max-w-2xl mx-auto">
+                    <input type="email" placeholder="Enter your email address" 
+                           class="flex-1 p-4 border border-gray-300 rounded-lg focus:ring-primary-teal focus:border-primary-teal transition duration-200" required>
+                    <button type="submit" 
+                            class="bg-primary-teal text-white px-8 py-4 rounded-lg font-semibold shadow-md hover:bg-opacity-90 transition duration-300 transform hover:-translate-y-0.5">
+                        Get Started
+                    </button>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer / Clients/Partners Section -->
+    <footer class="bg-dark-bg text-white py-16">
+        <div class="container mx-auto px-6 max-w-7xl">
+            <h3 class="text-center text-lg font-medium uppercase tracking-widest mb-10 opacity-70">Partners & Clients</h3>
+            
+            <div class="flex flex-wrap justify-center items-center gap-x-12 gap-y-8 opacity-90">
+                <p class="text-2xl font-bold hover:text-primary-teal transition duration-200 cursor-pointer">OFFICE</p>
+                <p class="text-2xl font-bold hover:text-primary-teal transition duration-200 cursor-pointer">DELL</p>
+                <p class="text-2xl font-bold hover:text-primary-teal transition duration-200 cursor-pointer">VISA</p>
+                <p class="text-2xl font-bold hover:text-primary-teal transition duration-200 cursor-pointer">TOOLS</p>
+                <p class="text-2xl font-bold hover:text-primary-teal transition duration-200 cursor-pointer">SONY</p>
+            </div>
+
+            <div class="text-center pt-16 text-sm opacity-50">
+                <p>&copy; 2025 Betty Nilson. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Initialize Lucide icons -->
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
